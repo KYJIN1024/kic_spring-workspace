@@ -1,0 +1,26 @@
+package controller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import mapper.SqlMapperInter;
+
+@Controller
+public class ConfigController {
+	
+	@RequestMapping( "/form.do" )
+	public String form(HttpServletRequest request, HttpServletResponse resoponse, Model model) {
+		
+		return "form";
+	}
+	@RequestMapping( "/form_ok.do" )
+	public String form_ok(HttpServletRequest request, HttpServletResponse resoponse, Model model) {
+		
+		return "form_ok";
+	}
+}

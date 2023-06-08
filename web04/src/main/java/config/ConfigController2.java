@@ -1,0 +1,49 @@
+package config;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class ConfigController2 {
+	
+	@RequestMapping("./list1.do")
+	public String handleRequest1() {
+		// => XXXAction
+		// DAO
+		
+	
+		System.out.println("handelRequest1() 호출");
+		return "listview1";
+		
+	}
+	
+	@RequestMapping("./list2.do")
+	public String handleRequest2() {
+		System.out.println("handelRequest2() 호출");
+		return "listview2";
+	}
+		
+	@RequestMapping("./list3.do")
+	public ModelAndView handleRequest3() {
+		System.out.println("handelRequest3() 호출");
+	
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("listview3");
+		return modelAndView;
+		
+		
+	}
+	
+	@RequestMapping("./list4.do")
+	public ModelAndView handleRequest4() {
+		System.out.println("handelRequest4() 호출");
+	
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("listview4");
+		return modelAndView;
+	
+	}
+	
+}
+	

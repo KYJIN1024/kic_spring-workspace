@@ -1,0 +1,49 @@
+spring mvc
+		xml
+		annotation
+		=> 게시판구성
+
+spring mvc => 
+		전자정부프레임 워크
+		+ template
+
+
+[xml방식]
+list1.do -> ListAction1 -> listview1.jsp
+list2.do -> ListAction2 -> listview2.jsp
+
+[annotation방식]
+		-> ShareClass
+list1.do -> controller.ConfigController -> listview1.jsp
+list2.do -> ListAction2 -> listview2.jsp
+
+쉽게 프로젝트를 setting
+Sprong MVC = Spring Boot
+
+Spring MVC - jdbc
+
+
+[annotation방식]
+	    -> root-context.xml
+write1.do -> ConfigController -> writeview1.jsp
+
+
+시간을 얻어서 출력
+시간을 셀렉트 해서 configcontroller에 출력
+시간을 리턴하고 출력할수 있게 코드를 수정해줘
+
+
+직접연결
+JdbcTemplate
+		MyBatis
+		sql -> 객체(ArrayList) -> java
+		sql -> 메서드 -> 객체(arrayList) -> list
+
+
+jdbcTemplate
+	1. 우편번호 검색기
+	2.  게시판 
+
+
+
+

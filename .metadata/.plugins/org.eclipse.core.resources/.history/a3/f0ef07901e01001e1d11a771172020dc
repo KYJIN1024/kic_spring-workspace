@@ -1,0 +1,28 @@
+package com.exam.spring08;
+
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class App2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		GenericXmlApplicationContext ctx 
+		= new GenericXmlApplicationContext("classpath:com/exam/spring08/context.xml");
+		
+		ListAction listAction1
+		= (ListAction)ctx.getBean("listAction1");
+		listAction1.execute();
+		
+		ListAction listAction2
+		= (ListAction)ctx.getBean("listAction2");
+		listAction2.execute();
+		
+		ListAction listAction3
+		= (ListAction)ctx.getBean("listAction3");
+		listAction3.execute();
+		
+		ctx.close();
+	}
+
+}

@@ -1,0 +1,31 @@
+package config;
+
+import org.springframework.stereotype.Controller;
+
+public class ConfigController1 {
+	
+	
+@Controller
+public class ConfigController1 {
+	
+	@RequestMapping("./list1.do")
+	public String handleRequest1() {
+		System.out.pringln("handelRequest1() 호출");
+		return "listview1";
+	}
+	
+	@RequestMapping("./list2.do")
+	public String handleRequest2() {
+		System.out.pringln("handelRequest2() 호출");
+		return "listview2";
+	}
+		
+	@RequestMapping("./list3.do")
+	public ModelAndView handleRequest3() {
+		System.out.pringln("handelRequest3() 호출");
+		
+		
+	
+	}
+
+

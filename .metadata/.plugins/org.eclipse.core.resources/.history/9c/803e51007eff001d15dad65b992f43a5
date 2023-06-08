@@ -1,0 +1,51 @@
+package controller;
+
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import model1.ExampleDAO;
+
+
+@Controller
+public class ConfigController {
+	
+	@Autowired
+	private ExampleDAO dao;
+	
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+	//private JdbcTemplate jdbcTemplate;
+
+	@RequestMapping( "/write1.do" )
+	public String write1() {
+		//System.out.println( "write1: " + jdbcTemplate);
+		
+		// MyBatis와 유사
+		// insert, update, delete => update
+		// select 
+		// 		queryForXXX() / query(), queryForList()
+		
+		// 1행 1열
+		// select now() as now;
+		
+		System.out.println( "결과 : " + dao.selectNow() );
+			
+		return "writeview1";
+	}
+	
+	@RequestMapping("/write2.do")
+	public String write2() {
+		// 1행 = to
+		return "writeview1";
+	}
+	
+	
+}

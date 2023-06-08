@@ -1,0 +1,19 @@
+package model1;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Repository
+@MapperScan( "mapper" )
+public class JdbcDAO {
+
+	@Autowired
+	private SqlSession mapper;
+	
+	public String selectNow() {
+		return mapper.selectNow();
+	}
+
+}

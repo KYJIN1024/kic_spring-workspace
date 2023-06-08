@@ -1,0 +1,30 @@
+package controller;
+
+import java.util.ArrayList;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import model1.BoardDAO;
+import model1.BoardTO;
+
+@ConfigController
+public class ConfigController {
+	
+	@Autowired
+	private SqlSession sqlSession;
+	
+	@RequestMapping( "/jdbc1.do" )
+	public String jdbc1() {
+			System.out.println();
+		
+	}
+}
+	
+	

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<!-- 
+		MVC Model1
+		list1.do -> list1.jsp
+		list2.do -> list2.jsp
+	-->
+	
+	<bean name="/list1.do" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName" value="/listview1.jsp" />
+	</bean>
+
+	<bean name="/list2.do" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName" value="/listview2.jsp" />
+	</bean>
+	
+	<bean name="/list3.do" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName" value="/listview3.jsp" />
+	</bean>
+	
+	<bean name="/list4.do" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName" value="/WEB-INF/views/listview4.jsp" />
+	</bean>
+	
+	<bean name="/board/list5.do" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName" value="/WEB-INF/views/listview5.jsp" />
+	</bean>
+
+</beans>
+  
+ 

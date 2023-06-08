@@ -1,0 +1,5 @@
+package com.exam.spring03.model;
+
+public class WriteAction {
+	void execute();
+}

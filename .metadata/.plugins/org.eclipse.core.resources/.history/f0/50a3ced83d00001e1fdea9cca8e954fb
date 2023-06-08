@@ -1,0 +1,8 @@
+package mapper;
+
+@Mapper
+public interface SqlMapperInter {
+	
+	@Select("select ")
+
+}

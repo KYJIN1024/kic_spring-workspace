@@ -1,0 +1,24 @@
+DI
+
+	xml
+	annotation
+
+	=> 객체의 관리
+				생성과 소멸
+
+	Spring MVC
+
+객체의 관리 - 흐름 : life cycle
+
+IntializingBean - 객체(빈) 생성
+DisposableBean - 객체(빈) 소멸
+
+ApplicationContextAware - 빈 초기화 => 컨테이너
+BeanNameAware			 - 빈의 이름 초기화
+
+
+Maven Project
+ 	=> web 구형 설정
+Dynamic Web Project + web.xml
+	=> Maven Project
+		=> Spring Library 관리

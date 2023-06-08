@@ -1,0 +1,23 @@
+package controller;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+
+@Controller
+public class ConfigController {
+	
+	@Autowired
+	private DataSource dataSource
+
+	@RequestMapping( "/write1.do" )
+	public String write1() {
+		System.out.println("write1 : " + dataSource);
+		
+		return "writeview1";
+	}
+	
+	
+}

@@ -1,0 +1,16 @@
+Spring MVC
+		<=
+		Spring DI
+		Spring AOP
+
+Spring MVC
+	Java Project - Maven Project + Spring Framework + 기타설정
+	STS(Spring Tool Suite)
+				기존버전(x)
+				새로운버전(=>Spring Boot)
+
+	Spring Boot 		유니콘
+	전자정부프레임워크	legacy spring mvc
+
+zipcode.daum			zipcodeAction			zipcode.jsp
+zipcode_ok.daum		zipcodeOkAction		zipcode_ok.jsp

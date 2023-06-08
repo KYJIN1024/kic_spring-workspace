@@ -1,0 +1,39 @@
+package controller;
+
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+
+import model1.ZipcodeDAO;
+
+
+@Controller
+public class ConfigController {
+	
+	@Autowired
+	private ZipcodeDAO dao;
+	
+	@RequestMapping( "/zipcode.do" )
+	public String lisst1() {
+		System.out.println("zipcode() 호출");
+		return "zipcode";
+	}
+	
+	@RequestMapping( "/zipcode_ok.do" )
+	public String handleRequest2() {
+		System.out.println("zipcode_ok() 호출");
+		return "zipcode_ok";
+	}
+}
+
+	
+	
+	
+}

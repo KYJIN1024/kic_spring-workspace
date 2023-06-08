@@ -1,0 +1,23 @@
+package com.exam.spring04;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.exam.spring01.config.BeanConfig;
+import com.exam.spring04.model.BoardTO;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		AnnotationConfigApplicationContext ctx
+		= new AnnotationConfigApplicationContext( BeanConfig.class );
+		
+		BoardTO to = (BoardTO)ctx.getBean( "boardTO" );
+		System.out.println( to.getSeq() );
+		System.out.println( to.getSubject() );
+		
+		ctx.close();
+		
+	}
+}

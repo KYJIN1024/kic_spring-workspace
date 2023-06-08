@@ -1,0 +1,21 @@
+package controller;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Configuration
+public class ConfigController {
+	
+	@Autowired
+	private SqlSession sqlSession;
+	
+	@RequestMapping( "/jdbc1.do" )
+	public String mybatis1() {
+			System.out.println( "" );
+		
+	}
+}
+	
+	

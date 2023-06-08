@@ -1,0 +1,13 @@
+package model1;
+
+import javax.sql.DataSource;
+
+public class ExampleDAO {
+	
+	private DataSource dataSource;
+	
+	public ExampleDAO() {
+		// TODO Auto-generated constructor stub
+		System.out.println( "ExampleDAO() 호출" + dataSource );
+	}
+}

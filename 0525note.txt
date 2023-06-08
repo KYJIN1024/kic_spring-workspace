@@ -1,0 +1,46 @@
+Spring Framework
+	Spring Project Core
+	=> DI / AOP
+	=> Spring MVC(Model2)
+			=> Spring Boot
+
+	DI (Dependency Injection: 의존성주입)
+		IOC를 중심 객체(생성 , 소멸)의 관리를 Spring이 대신
+	객체(생성, 소멸)의 관리설정
+		-XML : Spring Bean Configuration File
+		-Annotation 
+
+의존성 주입
+		멤버필드에 대한 초기화와 연관성이 있음
+		-생성자 주입
+		-setter 메서드
+
+Spring Project 구성
+1. java프로젝트 + 수동 라이브러리 적용
+2. 
+   Maven project에서 적용
+			순수하게 Maven project 할시 버전문제 -jdk
+
+	Gradle project
+3. STS(Spring Tool Suite)
+		eclipse + 라이브러리
+
+
+com.exam.spring.model1
+		BoardDAO
+com.exam.spring.model2
+		Action(i)
+			  execute()
+		ListAction
+			  생성자
+			  execute()
+
+come.exam.spring
+		App
+
+	
+
+
+
+
+	

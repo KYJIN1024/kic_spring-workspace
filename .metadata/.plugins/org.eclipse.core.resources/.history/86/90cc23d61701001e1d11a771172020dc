@@ -1,0 +1,40 @@
+package com.exam.spring05;
+
+import org.springframework.context.support.GenericApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		GenericXmlApplicationContext ctx 
+		= new GenericXmlApplicationContext("classpath:com/exam/spring05/context.xml");
+		
+		/*
+		HelloBean1 helloBean1 = (HelloBean1)ctx.getBean( "helloBean1" );
+		helloBean1.sayHello("홍길동1 :" + helloBean1 );
+		
+		HelloBean1 helloBean3 = (HelloBean1)ctx.getBean("helloBean1");
+		helloBean3.sayHello( "홍길동2 :" + helloBean3 ); //객체의 참조변수값
+		
+		HelloBean2 helloBean2 = (HelloBean2)ctx.getBean("helloBean2");
+		helloBean2.sayHello( "박문수" );
+		 */
+		ctx.close();
+		
+/*
+		HelloBean1 helloBean1 = (HelloBean1)ctx.getBean("helloBean1");
+		helloBean1.sayHello( "홍길동 :" + helloBean1 );
+		
+		
+	
+		/*
+		
+		
+*/		
+	
+		
+	}
+
+}

@@ -1,0 +1,18 @@
+Spring   database
+	
+	jsp(tomcat pooling : jndi)
+	
+	spring - jdbc
+
+	1. 직접연결
+			퀴리 -> 문자열
+
+	2. jdbcTemplate(orm)=> Hibernate( jpa)
+			퀴리 -> 객체
+	3. MyBatis
+
+프로젝트 구성
+	기본 라이브러리
+jdbc1.do 	jdbc1.jsp
+	
+

@@ -1,0 +1,20 @@
+package come.exam.spring04;
+
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		GenericXmlApplicationContext ctx 
+		= new GenericXmlApplicationContext("classpath:com/exam/spring05/context.xml");
+		
+		//HelloBean1 hello = (HelloBean1)ctx.getBean("helloBean1");
+		Hello hello = (Hello)ctx.getBean("helloBean1");
+		hello.sayHello("홍길동");
+		
+		ctx.close();
+	}
+
+}

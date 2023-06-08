@@ -1,0 +1,24 @@
+package model1;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Repository
+public class JdbcDAO {
+
+	@Autowired
+	private SqlSession sqlSession;
+	
+	@Autowired
+	private JdbcDAO dao;
+	
+	@RequestMapping( "/jdbc1.do" )
+	public String jdbc1() {
+		
+		String result = dao.selectNow();
+		
+		return "jdbc1";
+	}
+}

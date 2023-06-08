@@ -1,0 +1,68 @@
+package controller;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import model1.DeptTO;
+import model1.ExampleDAO;
+
+@Controller
+public class ConfigController {
+	
+	@Autowired
+	private ExampleDAO dao;
+	
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+
+	@RequestMapping( "/write1.do" )
+	public String write1() {
+		
+		System.out.println( "결과 : " + dao.selectNow() );
+			
+		return "writeview1";
+	}
+	
+	@RequestMapping("/write2.do")
+	public String write2() {
+		
+	//	DeptTO to = jdbcTemplate.queryForObject(
+	//		"select * from dept where deptno=?",
+	//		new BeanPropertyRowMapper<DeptTO>(DeptTO.class),
+	//		"20");
+		
+	//	DeptTO to = jdbcTemplate.queryForObject(
+	//			"select * from dept where deptno=?",
+	//			new Object[] { "30" }, 
+	//			new BeanPropertyRowMapper<DeptTO>(DeptTO.class));
+		
+		DeptTO to = jdbcTemplate.queryForObject(
+				"select * from dept where deptno=?",
+				new Object[] { "30" }, 
+				new RowMapper<DeptTO>() {
+					@Override
+					public DeptTO mapRow(ResultSet rs, int rowNum) throws SQLException {
+						// TODO Auto-generated method stub
+						DeptTO to = new DeptTO();
+						to.setDeptno( rs.getString("deptno"));
+						to.setDname( rs.getString("dname"));
+						to.setLoc( rs.getString("loc"));
+						
+						return to;
+					}
+				});
+		
+		System.out.println( to.getDeptno() );
+		System.out.println( to.getDname() );
+		System.out.println( to.getLoc() );
+	
+		return "writeview1";
+	}
+}

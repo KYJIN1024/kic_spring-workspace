@@ -1,0 +1,5 @@
+package com.exam.spring03.config;
+
+public class BeanCongig {
+
+}
